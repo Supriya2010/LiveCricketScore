@@ -1,0 +1,49 @@
+
+ <div class="container my-2">
+  <div class="row justify-content-md-center">
+     <div class="col-md-auto">
+        <div class="form-group ">
+           <label for="team1">Team1 Name</label>
+           <input type="text" class="form-control"
+            id="team1" placeholder="team1" 
+            [(ngModel)]="team1Name" >
+        </div>
+        <div class="form-group">
+           <label for="team2">Team2 Name</label>
+           <input type="text" class="form-control" 
+           id="team2" placeholder="team2"
+           [(ngModel)]="team2Name">
+        </div>
+        <div class="form-group">
+           <label for="toss">Toss</label>
+           <select class="form-control" id="toss" [(ngModel)]="toss">
+           <option>{{team1Name}}</option>
+           <option>{{team2Name}}</option>
+           </select>
+        </div>
+        <div class="form-group">
+           <label for="decision">Decision</label>
+           <select class="form-control" id="decision"[(ngModel)]="decision">
+           <option [value]="1">Batting</option>
+           <option [value]="2">Balling</option>
+           </select>
+        </div>
+        <div class="form-group">
+           <label for="overs">Overs</label>
+           <input type="number" class="form-control"
+            id="overs" placeholder="overs"
+             [(ngModel)]="overs">
+        </div>
+        <div class="row">
+           <div class="col">
+              <button type="button" 
+              class="float-left btn btn-danger" 
+              >Clear</button>
+           </div>
+           <div class="column ">
+              <button class="btn btn-success" (click)="onDefineTeamClick()">Define Teams</button>
+            </div>
+        </div>
+     </div>
+  </div>
+</div>

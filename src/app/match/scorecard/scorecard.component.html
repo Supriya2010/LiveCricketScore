@@ -1,0 +1,44 @@
+<h3>Scorecard</h3>
+<h4>Batting</h4>
+<th scope="col"></th>
+<div class="row">
+   <table class="table table-hover my-4">
+      <thead class="thead-light">
+         <tr>
+            <th scope="col">Batsman</th>
+            <th scope="col">Run</th>
+            <th scope="col">Balls</th>
+            <th scope="col">Strike Rate</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <option *ngFor="let cc of play1">{{cc}}</option>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+<h4>Bowling </h4>
+<th scope="col">{{cc.team2}}</th>
+<div class="row">
+   <table class="table table-hover my-4">
+      <thead class="thead-light">
+         <tr>
+            <th scope="col">Bowlers </th>
+            <th scope="col">Overs</th>
+            <th scope="col">Balls</th>
+            <th scope="col">Run</th>
+            <th scope="col">Eco Rate</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>
+               <option *ngFor="let cc of play2">{{cc}}</option>
+            </td>
+         </tr>
+      </tbody>
+   </table>
+</div>

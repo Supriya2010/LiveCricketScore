@@ -1,0 +1,20 @@
+<h3>Commentry</h3>
+
+<div class="col-sm-3 col-md-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Over</th>
+            <th scope="col">Runs On Ball</th>
+            <th scope="col">Commentry</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let commentry of matchService.getMatch().getCommentry()">
+            <td scope="row"> {{commentry.getOvers()}}.{{ commentry. getBalls() }} </td>
+            <td>{{commentry.getPossibleRuns()}}</td>
+            <td>{{commentry. getCommentary()}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
