@@ -18,16 +18,13 @@ export class AdminComponent implements OnInit {
   ngOnInit() {
     switch(this.matchservice.getMatchState()){
       case this.matchservice.MATCH_STATE_NOT_STARTED:
-      this.router.navigate(['/admin/newmatch'],{relativeTo:this.route});
+      this.router.navigate(['admin','newmatch']);
+      break;
+      case this.matchservice.MATCH_STATE_MATCH_DEFINED:
+      this.router.navigate(['admin','teams']);
       break;
       case this.matchservice.MATCH_STATE_TEAMS_DEFINED:
-      this.router.navigate(['/admin/teams'],{relativeTo:this.route});
-      break;
-      // case this.matchservice.MATCH_STATE_INNING1_STARTED:
-      // this.router.navigate(['/admin/inning'],{relativeTo:this.route});
-      // break;
-      default:
-      this.router.navigate(['admin','inning'])
+      this.router.navigate(['admin','inning']);
     }
   }
 

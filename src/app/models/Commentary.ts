@@ -25,23 +25,28 @@ export class Commentary{
 
      setBatsmanOnStrike(batsman1:String){
        this.batsmanOnStrike = batsman1;
+       console.log(this.batsmanOnStrike);
     }
 
     setNonStrikeBatsman(batsman2:String){
         this.nonStrikeBatsman = batsman2;
+        console.log(this.getNonStrikeBatsman);
      }
 
      setNewBaller(baller:String){
         this.newBaller = baller;
+        console.log(this.getNewBaller);
      }
 
      setOvers(over:number)
      {
          this.overs=over;
+         console.log(this.overs);
      }
 
      setPossibleRuns(runs:number){
         this.possibilityOfRuns = runs;
+        console.log(this.possibilityOfRuns);
      }
 
      setWickets(wicket:number){

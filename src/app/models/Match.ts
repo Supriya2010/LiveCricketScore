@@ -17,7 +17,7 @@ export class Match{
      private team1:Team;
      private team2:Team;
 
-     private saveSummary : Array<Commentary>;
+     private saveSummary : Array<Commentary> =[];
 
      setTeamNames(team1:String,team2:String)
      {
@@ -124,4 +124,6 @@ export class Match{
       {
         return this.saveSummary;
       }
+
+      
 }

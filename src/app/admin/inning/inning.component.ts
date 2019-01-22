@@ -15,8 +15,8 @@ export class InningComponent implements OnInit {
   batsmanOnStrike:String;
   nonStrikeBatsman:String;
   newBaller:String;
-  balls: number;
-  overs:number;
+  balls: number=0;
+  overs:number=0;
   possibilityOfRuns:number;
   wickets: number;
   catchBy: String;
@@ -69,6 +69,12 @@ export class InningComponent implements OnInit {
 
   onaddScoreButtonClick()
   {
+    this.balls++;
+    if(this.balls>=7)
+    {
+      this.balls=1;
+      this.overs++
+    }
     this.matchService.getMatch().saveSummaryDetails(this.batsmanOnStrike,this.nonStrikeBatsman,this.newBaller,this.balls,this.overs,
       this.possibilityOfRuns,this.wickets,this.catchBy,this.commentary);
   }

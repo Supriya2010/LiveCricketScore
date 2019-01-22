@@ -10,10 +10,10 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let commentry of matchService.getMatch().getCommentry()">
+          <tr *ngFor="let commentry of matchService.getMatch().getCommentary()">
             <td scope="row"> {{commentry.getOvers()}}.{{ commentry. getBalls() }} </td>
             <td>{{commentry.getPossibleRuns()}}</td>
-            <td>{{commentry. getCommentary()}}</td>
+            <td>{{commentry.getCommentary()}}</td>
           </tr>
         </tbody>
       </table>

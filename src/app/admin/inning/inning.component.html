@@ -1,5 +1,5 @@
 <div class="container col-sm-3 border border -dark my-2">
-      <form >
+      
          <h2 style="text-align: center">Summary</h2>
          <div class="form-group">
             <label for="formGroupExampleInput" >Select Batsman On Strike</label>
@@ -65,7 +65,7 @@
             <label for="formGroupExampleInput2">Catch By</label>
             <select class="hideLabel col-sm-6 from-control ml-4"
             #Catch [disabled]="btnDisable" 
-            (change)="onSelectOfCatch()" 
+             (change)="onSelectOfCatch()" 
             class="form-control" name="catchBy" 
             [(ngModel)]="catchBy">
             <option>Catch By</option>
@@ -77,13 +77,13 @@
          <div class="form-group">
             <label for="formGroupExampleInput2">Balls</label>
             <input type="text" class="form-control" id="balls" 
-            placeholder="Balls" name="ball" 
+            placeholder="Balls" [value]="balls" name="ball" 
             [(ngModel)] = "balls"/>
          </div>
          <div class="form-group">
             <label for="formGroupExampleInput2">Overs</label>
             <input type="text" class="form-control" id="overs"
-            placeholder="Overs" name="over"
+            placeholder="Overs" name="over" [value]="overs"
             [(ngModel)] = "overs">
          </div>
          <div class="form-group">
@@ -94,6 +94,6 @@
          </div>
          <button type="button" class="btn btn-success my-2 " 
             (click)="onaddScoreButtonClick()">Add Score</button>
-      </form>
+    
    </div>
    

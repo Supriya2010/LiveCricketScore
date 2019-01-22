@@ -23,7 +23,23 @@ export class NewMatchComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClearButtonClick(){
+
+    this.team1Name = null;
+    this.team2Name = null;
+    this.toss = null;
+    this.overs = null;
+    this.decision = null;
+  }
+
   onDefineTeamClick(){
+
+    if(this.overs < 5 || this.overs > 50)
+    {
+      alert('Overs must be in between 5 and 50');
+          return;
+    }
+
     this.matchservice.getMatch().setTeamNames(this.team1Name, this.team2Name);
     console.log(this.team1Name);
     console.log(this.team2Name);
